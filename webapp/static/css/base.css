@@ -1,0 +1,15 @@
+body {
+  padding: 20px;
+}
+
+.left {
+  float: left;
+  width: 300px;
+}
+
+.right {
+  float: left;
+}
+
+
+

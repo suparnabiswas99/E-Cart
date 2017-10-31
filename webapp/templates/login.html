@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title>Test React App</title>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/ >
+		<link rel="stylesheet" type="text/css" href="/static/css/base.css" />
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+				<form action="/login/" method="post">
+					{% if declined %}
+						<div class="alert alert-danger">Username or password was incorrect</div>
+					{% endif %}
+				    {% csrf_token %}
+				    {{ form }}
+				    <input type="submit" value="Login" />
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
+

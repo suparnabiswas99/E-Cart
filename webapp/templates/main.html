@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title>Test React App</title>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/ >
+		<link rel="stylesheet" type="text/css" href="/static/css/base.css" />
+		<script src="/static/js/jquery-1.10.2.min.js"></script>
+		<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+	    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+	    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+	    <script src="/static/js/main.jsx" type="text/babel"></script>
+	    <script type="text/babel">
+	      ReactDOM.render(
+	        <ProdcutPg/>,
+	        document.getElementById('root')
+	      );
+    	</script>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+				<h2>Logged-in user: {{ user.first_name }} {{ user.last_name }} <a class="pull-right" href="logout">Logout</a></h2>
+			</div>
+			<div class="row">
+				<div id="root">
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

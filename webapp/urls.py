@@ -1,30 +1,9 @@
-'''
 from django.conf.urls import url,include
 from . import views
 from rest_framework import routers
 from rest_framework.authtoken.views import obtain_auth_token
-
-
-router = routers.DefaultRouter()
-router.register(r'account', views.AccountViewSet,base_name='account-view')
-router.register(r'cart', views.CartViewSet,base_name='cart-view')
-router.register(r'products', views.ProductViewSet,base_name='product-view')
-router.register(r'orders', views.OrderViewSet,base_name='order-view')
-
-
-urlpatterns = [
-    url(r'^', include(router.urls)),
-    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-]
-urlpatterns += [url(r'^api-token-auth/', obtain_auth_token),]
-
-'''
-
-
-from django.conf.urls import url,include
-from . import views
-from rest_framework import routers
-from rest_framework.authtoken.views import obtain_auth_token
+from django.contrib.auth.views import logout
+from django.views.generic import TemplateView
 
 
 router = routers.DefaultRouter()

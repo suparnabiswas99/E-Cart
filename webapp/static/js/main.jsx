@@ -31,7 +31,7 @@ class ProductsList extends React.Component {
 	render() {
 		let products = '';
 		if (this.state.products) {
-			products = this.state.products.map((p) => (<li key={p.product_name} onClick={() => this.props.selectProduct(p)}>{p.product_name}</li>));
+			products = this.state.products.map((p) => (<li key={p.Product_Name} onClick={() => this.props.selectProduct(p)}>{p.Product_Name}</li>));
 		}
 		return <div>
 			<ol>
@@ -47,9 +47,9 @@ class ProductDetail extends React.Component {
 		if (product)
 			return <div>
 				<h3>Details</h3><br/>
-				Name: {product.product_name}<br/>
+				Name: {product.Product_Name}<br/>
 				Price: {product.price}<br/>
-				ratings: {product.avg_ratings}<br/>
+				ratings: {product.rating}<br/>
 			</div>;
 		else
 			return <div><p>Please click on a Product name in the list</p></div>;

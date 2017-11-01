@@ -6,7 +6,7 @@ from rest_framework import serializers
 class ProductSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Product
-        fields = ('Product_Name', 'price', 'avg_ratings')
+        fields = ('Product_Name', 'price', 'rating')
 
 
 class AccountSerializer(serializers.HyperlinkedModelSerializer):
